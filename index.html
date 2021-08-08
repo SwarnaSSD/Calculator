@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GUI Calculator</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <form name="form">
+                <div class="display">
+                    <input type="text" placeholder="0" name="displayResult" >
+                </div>
+                <br>
+                <div class="buttons" >
+                    
+                    <div class="row">
+                        <input class="btn" type="button" value="7" name="b7" onclick="func(b7.value)">
+                        <input class="btn" type="button" value="8" name="b8" onclick="func(b8.value)">
+                        <input class="btn" type="button" value="9" name="b9" onclick="func(b9.value)">
+                        <input class="btn" type="button" value="+" name="plus" onclick="func(plus.value)">
+                    </div>
+
+                    <div class="row">
+                        <input class="btn" type="button" value="4" name="b4" onclick="func(b4.value)">
+                        <input class="btn" type="button" value="5" name="b5" onclick="func(b5.value)">
+                        <input class="btn" type="button" value="6" name="b6" onclick="func(b6.value)">
+                        <input class="btn" type="button" value="-" name="minus" onclick="func(minus.value)">
+                    </div>
+
+                    <div class="row">
+                        <input class="btn" type="button" value="1" name="b1" onclick="func(b1.value)">
+                        <input class="btn" type="button" value="2" name="b2" onclick="func(b2.value)">
+                        <input class="btn" type="button" value="3" name="b3" onclick="func(b3.value)">
+                        <input class="btn" type="button" value="*" name="mul" onclick="func(mul.value)">
+                    </div>
+
+                    <div class="row">
+                        <input class="btn" type="button" value="0" name="b0" onclick="func(b0.value)">
+                        <input class="btn" type="button" value="." name="bd" onclick="func(bd.value)">
+                        <input class="btn" type="button" value="/" name="div" onclick="func(div.value)">
+                        <input class="blue" type="button" value="=" onclick="displayResult.value= eval(displayResult.value)">
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <script>
+            function func(result) {
+                form.displayResult.value = form.displayResult.value + result;
+            }
+        </script>
+        
+    </body>
+</html>
